@@ -10,11 +10,13 @@ import java.util.List;
 public class CategoriaServiceImpl implements ICategoriaService {
    private final ICategoriaDao categoriaDao;
    public CategoriaServiceImpl(ICategoriaDao categoriaDao){
+
        this.categoriaDao = categoriaDao;
    }
     @Override
     public List<Categoria> findAll() {
-        return this.categoriaDao.findAll();
+
+       return this.categoriaDao.findAll();
     }
     @Override
     public Page<Categoria> findAll(Pageable pageable) {
@@ -26,7 +28,7 @@ public class CategoriaServiceImpl implements ICategoriaService {
     }
     @Override
     public Categoria findById(Long id) {
-        return this.categoriaDao.findById(id).orElse(null);
+       return this.categoriaDao.findById(id).orElse(null);
     }
     @Override
     public void delete(Categoria categoria) {
