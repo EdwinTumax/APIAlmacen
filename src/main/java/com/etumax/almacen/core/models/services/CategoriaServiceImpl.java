@@ -34,4 +34,9 @@ public class CategoriaServiceImpl implements ICategoriaService {
     public void delete(Categoria categoria) {
         this.categoriaDao.delete(categoria);
     }
+
+    @Override
+    public void delete(Long id){
+       this.categoriaDao.deleteById(id);
+    }
 }
